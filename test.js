@@ -65,15 +65,17 @@ const allPokemonsWithDescription = [
   "Ampharos is a Electric type Pokémon of generation 2 of species Light pokemon with abilities Static and Plus.",
   "Bellossom is a Grass type Pokémon of generation 2 of species Flower pokemon with abilities Chlorophyll and Healer."
 ];
-function searchStringInArray (str, strArray) {
-  for (var j=0; j<strArray.length; j++) {
-      if (strArray[j].match(str)) return `${strArray[j]}, ${allSuperHeroesWithDescription[j]}`;
+function searchStringInArray(str, strArray,strwithDArray) {
+  for (var j = 0; j < strArray.length; j++) {
+    if (strArray[j].match(str)) {
+      return `${strArray[j]}, ${strwithDArray[j]}`;
+    }
   }
 }
   // let name = this.event.request.intent.slots.Pokemon.value;
   let name = 'Furret';
-  let sPokemon = searchStringInArray(name, allPokemons);
+  let sPokemon = searchStringInArray(name, allPokemons, allPokemonsWithDescription);
   console.log(sPokemon);
   let sname = 'Flash'
-  let sPokemons = searchStringInArray(sname, allSuperHeroes);
+  let sPokemons = searchStringInArray(sname, allSuperHeroes,allSuperHeroesWithDescription);
   console.log(sPokemons);
