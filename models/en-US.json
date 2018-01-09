@@ -29,17 +29,37 @@
           "slots": []
         },
         {
-          "name": "dragonBallZIntent",
+          "name": "superHeroIntent",
           "samples": [
-            "a Dragon ball fact",
-            "tell me a Dragon ball fact",
-            "give me a Dragon ball fact",
-            "tell me a Dragon ball trivia",
-            "give me a Dragon ball trivia",
-            "tell me some Dragon ball information",
-            "give me some Dragon ball information"
+            "a superhero fact",
+            "tell me a superhero fact",
+            "give me a superhero fact",
+            "tell me a superhero trivia",
+            "give me a superhero trivia",
+            "tell me some superhero information",
+            "give me some superhero information"
           ],
           "slots": []
+        },
+        {
+          "name": "specificPokemonIntent",
+          "samples": [
+            "tell me about {Pokemon} pokemon",
+            "tell me information about {Pokemon} pokemon",
+            "give me information about {Pokemon} pokemon",
+            "tell me about this {Pokemon} pokemon"
+          ],
+          "slots": ['AMAZON.US_FIRST_NAME']
+        },
+        {
+          "name": "specificSuperHeroIntent",
+          "samples": [
+            "tell me about {superhero}",
+            "tell me information about {superhero}",
+            "give me information about {superhero}",
+            "tell me about this {superhero}"
+          ],
+          "slots": ['AMAZON.US_FIRST_NAME']
         }
       ]
     }

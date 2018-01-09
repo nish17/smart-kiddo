@@ -3,10 +3,9 @@ const Alexa = require("alexa-sdk");
 const APP_ID = "amzn1.ask.skill.f325ef48-8396-4b23-9664-83a2a8a5018d";
 var {allSuperHeroesWithDescription, allSuperHeroes} = require('./data/superHeroes');
 var {allPokemonsWithDescription, allPokemons} = require('./data/pokemons');
-const SKILL_NAME = "smart kiddo";
+const SKILL_NAME = "smarT kIddO";
 const GET_FACT_MESSAGE = "Here's your fact: ";
-const HELP_MESSAGE =
-  "You can say tell me a new year fact, or, you can say exit... What can I help you with?";
+const HELP_MESSAGE = "HI there!! You can ask me about your favorite pokemon character, or your favorite superhero character or else you can say exit... What can I help you with?";
 const HELP_REPROMPT = "What can I help you with?";
 const STOP_MESSAGE = "Goodbye!";
 function searchStringInArray(str, strArray,strwithDArray) {
@@ -30,7 +29,7 @@ const handlers = {
     this.emit("GetNewFactIntent");
   },
   pokemonFactsIntent: function() {
-    const factArr = facts;
+    const factArr = allPokemonsWithDescription;
     const factIndex = Math.floor(Math.random() * factArr.length);
     const randomFact = factArr[factIndex];
     const speechOutput = GET_FACT_MESSAGE + randomFact;
@@ -39,8 +38,8 @@ const handlers = {
     this.response.speak(speechOutput);
     this.emit(":responseReady");
   },
-  dragonBallZIntent: function() {
-    const factArr = facts;
+  superHeroIntent: function() {
+    const factArr = allSuperHeroesWithDescription;
     const factIndex = Math.floor(Math.random() * factArr.length);
     const randomFact = factArr[factIndex];
     const speechOutput = GET_FACT_MESSAGE + randomFact;
@@ -56,11 +55,11 @@ const handlers = {
     this.response.speak(sPokemon);
     this.emit(":responseReady");
   },
-  specificSuperHeroesIntent: function() {
-    let name = this.event.request.intent.slots.Pokemon.value;
-    let sPokemon = searchStringInArray(name, allSuperHeroes,allSuperHeroesWithDescription);
-    this.response.cardRenderer(SKILL_NAME, sPokemon);
-    this.response.speak(sPokemon);
+  specificSuperHeroIntent: function() {
+    let name = this.event.request.intent.slots.superhero.value;
+    let superhero = searchStringInArray(name, allSuperHeroes,allSuperHeroesWithDescription);
+    this.response.cardRenderer(SKILL_NAME, superhero);
+    this.response.speak(superhero);
     this.emit(":responseReady");
   },
   "AMAZON.HelpIntent": function() {
