@@ -1,0 +1,47 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "smart kiddo",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "pokemonFactsIntent",
+          "samples": [
+            "a pokemon fact",
+            "tell me a pokemon fact",
+            "give me a pokemon fact",
+            "tell me a pokemon trivia",
+            "give me a pokemon trivia",
+            "tell me some pokemon information",
+            "give me some pokemon information"
+          ],
+          "slots": []
+        },
+        {
+          "name": "dragonBallZIntent",
+          "samples": [
+            "a Dragon ball fact",
+            "tell me a Dragon ball fact",
+            "give me a Dragon ball fact",
+            "tell me a Dragon ball trivia",
+            "give me a Dragon ball trivia",
+            "tell me some Dragon ball information",
+            "give me some Dragon ball information"
+          ],
+          "slots": []
+        }
+      ]
+    }
+  }
+}
