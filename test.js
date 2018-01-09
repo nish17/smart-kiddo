@@ -62,7 +62,7 @@ const allPokemonsWithDescription = [
   "Ampharos is a Electric type Pokémon of generation 2 of species Light pokemon with abilities Static and Plus.",
   "Bellossom is a Grass type Pokémon of generation 2 of species Flower pokemon with abilities Chlorophyll and Healer."
 ];
-
+const 
 function searchStringInArray (str, strArray) {
   for (var j=0; j<strArray.length; j++) {
       if (strArray[j].match(str)) return `${strArray[j]}, ${allPokemonsWithDescription[j]}`;
