@@ -56,6 +56,7 @@ const handlers = {
   },
   specificPokemonIntent: function() {
     var name = this.event.request.intent.slots.Pokemon.value;
+<<<<<<< HEAD
     var speechOutput = name;
     if(name === undefined) speechOutput = `That's an interesting pokemon name`;
     for (var j = 0; j < allPokemons.length; j++) {
@@ -65,6 +66,11 @@ const handlers = {
       }
     speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
     this.response.cardRenderer(SKILL_NAME, speechOutput);
+=======
+//     if(name === undefined) var speechOutput = `That's an interesting pokemon name`;
+//     else var speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
+//     this.response.cardRenderer(SKILL_NAME, speechOutput);
+>>>>>>> 9a3cd3316ed70c9168f31ae635100b43d5a75fbe
     this.response.speak(name);
     this.emit(":responseReady");
   },
