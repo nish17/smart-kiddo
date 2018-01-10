@@ -9,22 +9,12 @@ const HELP_MESSAGE = "HI there!! You can ask me about your favorite pokemon char
 const HELP_REPROMPT = "What can I help you with?";
 const STOP_MESSAGE = "Goodbye!";
 
-function searchStringInArray(str, strArray,strwithDArray) {
-  for (var j = 0; j < strArray.length; j++) {
-    if (strArray[j].match(str)) {
-      return strArray[j] + " " + strwithDArray[j];
-      break;
-    }
-  }
-}
-
 exports.handler = function(event, context, callback) {
   var alexa = Alexa.handler(event, context);
   alexa.appId = APP_ID;
   alexa.registerHandlers(handlers);
   alexa.execute();
 };
-
 const handlers = {
   LaunchRequest: function() {
     this.emit("GetNewFactIntent");
@@ -52,36 +42,6 @@ const handlers = {
 
     this.response.cardRenderer(SKILL_NAME, randomFact);
     this.response.speak(speechOutput);
-    this.emit(":responseReady");
-  },
-  specificPokemonIntent: function() {
-    var name = this.event.request.intent.slots.Pokemon.value;
-<<<<<<< HEAD
-    var speechOutput = name;
-    if(name === undefined) speechOutput = `That's an interesting pokemon name`;
-    for (var j = 0; j < allPokemons.length; j++) {
-        if (allPokemons[j].match(name)) {
-            var speechOutput = `${allPokemonsWithDescription[j]}`;
-        }
-      }
-    speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
-    this.response.cardRenderer(SKILL_NAME, speechOutput);
-=======
-//     if(name === undefined) var speechOutput = `That's an interesting pokemon name`;
-//     else var speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
-//     this.response.cardRenderer(SKILL_NAME, speechOutput);
->>>>>>> 9a3cd3316ed70c9168f31ae635100b43d5a75fbe
-    this.response.speak(name);
-    this.emit(":responseReady");
-  },
-  specificSuperHeroIntent: function() {
-    var name = this.event.request.intent.slots.superhero.value;
-    var speechOutput;
-    var Flashname = 'flash';
-    if(name === undefined) speechOutput = `That's an interesting SuperHero name`;
-    else speechOutput = searchStringInArray(name, allSuperHeroes,allSuperHeroesWithDescription);
-    this.response.cardRenderer(SKILL_NAME, name);
-    this.response.speak(name);
     this.emit(":responseReady");
   },
   "AMAZON.HelpIntent": function() {

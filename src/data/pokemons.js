@@ -1,4 +1,4 @@
-const allPokemons = ["Chikorita","Bayleef","Meganium","Cyndaquil","Quilava","Typhlosion","Totodile","Croconaw","Feraligatr","Sentret","Furret","Hoothoot","Hoothoot",
+const allPokemons = ["Chikorita","Bayleef","Meganium","Cyndaquil","Quilava","Typhlosion","Totodile","Croconaw","Feraligatr","Sentret","Furret","Hoothoot",
     "Noctowl","Ledyba","Ledian","Spinarak","Ariados","Corbat","Chinchou","Lanturn","Pichu","Cleffa","Igglybuff","Togepi","Natu","Xatu","Mareep","Flaaffy","Ampharos",
   "Bellossom","Pachirisu","Altaria","Magnezone","Pangoro","Electrode","Escavalier","Rhydon","Togepi","Houndoom","Milotic","Drifloon","Machamp","Tyrantrum","Crobat","Vikavolt",
   "Talonflame","Smeargle","Mudkip","Porygon","Palossand","Castform","Tyranitar","Tapu Koko","Sableye","Eelektross","Shuckle","Kabutops","Zoroark","Azumarill","Magcargo",
