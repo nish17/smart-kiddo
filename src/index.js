@@ -71,9 +71,9 @@ const handlers = {
   specificSuperHeroIntent: function() {
     var name = this.event.request.intent.slots.superhero.value;
     var speechOutput;
-    // var Flashname = 'flash';
-    // if(name === undefined) speechOutput = `That's an interesting SuperHero name`;
-    // else speechOutput = searchStringInArray(name, allSuperHeroes,allSuperHeroesWithDescription);
+    var Flashname = 'flash';
+    if(name === undefined) speechOutput = `That's an interesting SuperHero name`;
+    else speechOutput = searchStringInArray(name, allSuperHeroes,allSuperHeroesWithDescription);
     this.response.cardRenderer(SKILL_NAME, name);
     this.response.speak(name);
     this.emit(":responseReady");
