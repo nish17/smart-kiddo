@@ -1,6 +1,7 @@
 "use strict";
 const Alexa = require("alexa-sdk");
-const APP_ID = "amzn1.ask.skill.f325ef48-8396-4b23-9664-83a2a8a5018d";
+const APPID = require('APP_ID');
+const APP_ID = APPID;
 var {allSuperHeroesWithDescription, allSuperHeroes} = require('./data/superHeroes');
 var {allPokemonsWithDescription, allPokemons} = require('./data/pokemons');
 const SKILL_NAME = "smarT kIddO";
