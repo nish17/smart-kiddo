@@ -289,10 +289,10 @@ const handlers = {
   },
   specificPokemonIntent: function() {
     var name = this.event.request.intent.slots.Pokemon.value;
-    if(name === undefined) var speechOutput = `That's an interesting pokemon name`;
-    else var speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
-    this.response.cardRenderer(SKILL_NAME, speechOutput);
-    this.response.speak(speechOutput);
+//     if(name === undefined) var speechOutput = `That's an interesting pokemon name`;
+//     else var speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
+//     this.response.cardRenderer(SKILL_NAME, speechOutput);
+    this.response.speak(name);
     this.emit(":responseReady");
   },
   specificSuperHeroIntent: function() {
