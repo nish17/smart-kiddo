@@ -60,7 +60,7 @@ const handlers = {
     if(name === undefined) speechOutput = `That's an interesting pokemon name`;
     for (var j = 0; j < allPokemons.length; j++) {
         if (allPokemons[j].match(name)) {
-            var speechOutput = `${allPokemonsWithDescription[j]}`;
+            var speechOutput = allPokemonsWithDescription[j];
         }
       }
     speechOutput = searchStringInArray(name, allPokemons,allPokemonsWithDescription);
